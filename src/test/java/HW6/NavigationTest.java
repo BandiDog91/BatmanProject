@@ -1,10 +1,7 @@
 package HW6;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,5 +27,9 @@ public class NavigationTest {
                 .navigationBlock.clickTransportButton();
         Assertions.assertEquals(driver.getCurrentUrl(),"https://cars.av.by/");
 
+    }
+    @AfterEach
+    void tearDown(){
+        driver.quit();
     }
 }

@@ -1,5 +1,6 @@
 package HW6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,6 +27,7 @@ public class NavigationBlock extends BaseView{
     @FindBy(xpath = "//span[.='Финансы']")
     private WebElement financeButton;
 
+    @Step("Клик по конопке Транспорт")
     public void clickTransportButton(){
         transportButton.click();
     }
