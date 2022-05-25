@@ -51,6 +51,7 @@ public class AvByTest {
                 .perform();
         assertThat(driver.findElement(By.xpath("//div[@class='badge__title']")),isDisplayed());
     }
+
     @AfterEach
     void tearDown(){
         driver.quit();
